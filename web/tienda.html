@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Assets/Imagenes/LOGO-CERVECERIA.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/estilo/tienda.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
+    <title>The Camp || Tienda</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-white">
+            <div class="container-fluid">
+                <a href="#">
+                    <img src="./assets/imagenes/logo-nombre-negro.png" class="imagen-navbar navbar-brand"
+                        alt="Logo the camp">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link animated-line fs-5" aria-current="page" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link animated-line fs-5" href="./nosotros.html">Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link animated-line fs-5" href="./catalogo.html">Catalogo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link animated-line fs-5" href="./contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link animated-line fs-5" href="./tienda.html">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link animated-line fs-5" href="./login-register.html"><iconify-icon
+                                    icon="ph:user-circle"></iconify-icon></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+ <!--    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./assets/imagenes/carousel1.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/imagenes/carousel2.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/imagenes/carousel3.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div> -->
+
+    <main class="main">
+
+        <div id="app">
+            {{filtro}}
+        <h1 class="w-100 d-flex justify-content-center p-3 titulo-tienda">TIENDA</h1>
+        <div class="contenedor-buscador-carrito">
+            <div class="input-group container-buscador">
+                <div class="form-outline">
+                    <input id="search-focus" type="search" id="form1" class="form-control" placeholder="Buscador">
+                </div>
+            </div>
+
+            <div class="container-dropdown">
+                <div class="dropdown">
+                    <button class="btn btn-carrito dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <iconify-icon icon="typcn:shopping-cart" width="25" height="25"></iconify-icon>
+                    </button>
+                    <div class="dropdown-menu">
+                        <div class="card menu-item" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Nombre</h5>
+                                <p>Precio: $</p>
+                                <p>Unidades:
+                                    <button class="btn border border-dark m-2">+</button>
+                                    <button class="btn border border-dark m-2">-</button>
+                                </p>
+
+                                <button class="btn btn-danger btn-sm ">Quitar elemento</button>
+
+                            </div>
+                        </div>
+                        <p v-if="carrito.length" class="mt-4" style="text-align: center;">Total: $</p>
+                        <a v-if="carrito.length" href="./compra.html" class="btn btn-carrito finalizarCompra">Finalizar Compra</a>
+                        <h5 v-if="!carrito.length" style="text-align: center;">Su carrito se encuentra vacio</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedor-cartas-categorias">
+            <div class="contenedor-categorias">
+                <!-- CATEGORIAS-->
+                <nav class="navbar navbar-expand-lg bg-white">
+                    <div class="contenedor">
+                        <a class="navbar-brand" href="#">Categorias</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavcategorias" aria-controls="navbarNavcategorias" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <iconify-icon icon="ic:baseline-plus"></iconify-icon>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavcategorias">
+                            <ul class="navbar-nav contenedor-tipos">
+                                <h6 class="nav-item">Tipos de cervezas</h6>
+                                <li class="nav-item" v-for="tipo of filtroCheckbox">
+                                    <label>
+                                    <input type="checkbox" class="nav-link" checked autocomplete="off" :value="tipo" v-model="checked">{{tipo}}</label>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav contenedor-formato">
+                                <h6 class="nav-item">Tipos de Formatos</h6>
+                                <li class="nav-item">
+                                    <input type="checkbox" class="nav-link">Lata
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav contenedor-marcas">
+                                <h6 class="nav-item">Marcas de cervezas</h6>
+                                <li class="nav-item">
+                                    <input type="checkbox" class="nav-link">QUILMES
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="container-cards d-flex justify-content-center mt-50 mb-50">
+                <div class="row">
+                    <div class="col-md-4 mt-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-img-actions">
+                                    <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1562074043/234.png"
+                                        class="card-img img-fluid" width="96" height="350" alt="">
+                                </div>
+                            </div>
+
+                            <div class="card-body bg-light text-center">
+                                <div class="mb-2">
+                                    <h6 class="font-weight-semibold mb-2">
+                                        <a href="#" class="text-default mb-2" data-abc="true">Toshiba Notebook with 500GB
+                                            HDD & 8GB RAM</a>
+                                    </h6>
+                                    <a href="#" class="text-muted" data-abc="true">Laptops & Notebooks</a>
+                                </div>
+
+                                <h3 class="mb-0 font-weight-semibold">$250.99</h3>
+
+                                <button type="button" class="btn bg-cart"><i class="fa fa-cart-plus mr-2"></i> Add to
+                                    cart</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4 mt-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-img-actions">
+                                    <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1562074043/234.png"
+                                        class="card-img img-fluid" width="96" height="350" alt="">
+                                </div>
+                            </div>
+
+                            <div class="card-body bg-light text-center">
+                                <div class="mb-2">
+                                    <h6 class="font-weight-semibold mb-2">
+                                        <a href="#" class="text-default mb-2" data-abc="true">Toshiba Notebook with 500GB
+                                            HDD & 8GB RAM</a>
+                                    </h6>
+                                    <a href="#" class="text-muted" data-abc="true">Laptops & Notebooks</a>
+                                </div>
+
+                                <h3 class="mb-0 font-weight-semibold">$250.99</h3>
+
+                                <button type="button" class="btn bg-cart"><i class="fa fa-cart-plus mr-2"></i> Add to
+                                    cart</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mt-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-img-actions">
+                                    <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1562074043/234.png"
+                                        class="card-img img-fluid" width="96" height="350" alt="">
+                                </div>
+                            </div>
+
+                            <div class="card-body bg-light text-center">
+                                <div class="mb-2">
+                                    <h6 class="font-weight-semibold mb-2">
+                                        <a href="#" class="text-default mb-2" data-abc="true">Toshiba Notebook with 500GB
+                                            HDD & 8GB RAM</a>
+                                    </h6>
+                                    <a href="#" class="text-muted" data-abc="true">Laptops & Notebooks</a>
+                                </div>
+
+                                <h3 class="mb-0 font-weight-semibold">$250.99</h3>
+
+                                <button type="button" class="btn bg-cart"><i class="fa fa-cart-plus mr-2"></i> Add to
+                                    cart</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4 mt-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-img-actions">
+                                    <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1562074043/234.png"
+                                        class="card-img img-fluid" width="96" height="350" alt="">
+                                </div>
+                            </div>
+
+                            <div class="card-body bg-light text-center">
+                                <div class="mb-2">
+                                    <h6 class="font-weight-semibold mb-2">
+                                        <a href="#" class="text-default mb-2" data-abc="true">Toshiba Notebook with 500GB
+                                            HDD & 8GB RAM</a>
+                                    </h6>
+                                    <a href="#" class="text-muted" data-abc="true">Laptops & Notebooks</a>
+                                </div>
+
+                                <h3 class="mb-0 font-weight-semibold">$250.99</h3>
+
+                                <button type="button" class="btn bg-cart"><i class="fa fa-cart-plus mr-2"></i> Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4 mt-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-img-actions">
+                                    <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1562074043/234.png"
+                                        class="card-img img-fluid" width="96" height="350" alt="">
+                                </div>
+                            </div>
+
+                            <div class="card-body bg-light text-center">
+                                <div class="mb-2">
+                                    <h6 class="font-weight-semibold mb-2">
+                                        <a href="#" class="text-default mb-2" data-abc="true">Toshiba Notebook with 500GB
+                                            HDD & 8GB RAM</a>
+                                    </h6>
+                                    <a href="#" class="text-muted" data-abc="true">Laptops & Notebooks</a>
+                                </div>
+
+                                <h3 class="mb-0 font-weight-semibold">$250.99</h3>
+
+                                <button type="button" class="btn bg-cart"><i class="fa fa-cart-plus mr-2"></i> Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4 mt-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-img-actions">
+                                    <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1562074043/234.png"
+                                        class="card-img img-fluid" width="96" height="350" alt="">
+                                </div>
+                            </div>
+
+                            <div class="card-body bg-light text-center">
+                                <div class="mb-2">
+                                    <h6 class="font-weight-semibold mb-2">
+                                        <a href="#" class="text-default mb-2" data-abc="true">Toshiba Notebook with 500GB
+                                            HDD & 8GB RAM</a>
+                                    </h6>
+
+                                    <a href="#" class="text-muted" data-abc="true">Laptops & Notebooks</a>
+                                </div>
+
+                                <h3 class="mb-0 font-weight-semibold">$250.99</h3>
+
+                                <button type="button" class="btn bg-cart"><i class="fa fa-cart-plus mr-2"></i> Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <footer class="main-footer">
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/tienda.js"></script>
+</body>
+
+</html>

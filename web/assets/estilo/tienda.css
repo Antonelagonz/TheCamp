@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    /* border: 1px solid red; */
+}
+
+:root {
+    --d: 700ms;
+    --e: cubic-bezier(0.19, 1, 0.22, 1);
+    --font-sans: 'Raleway', sans-serif;
+    --font-serif: 'Raleway', sans-serif;
+}
+
+/* inicio de header navbar */
+
+header {
+    width: 100%;
+}
+
+.imagen-navbar {
+    width: 285px;
+    height: 100px;
+}
+
+.animated-line {
+    color: #ff0468;
+    margin: 10px 30px;
+    font-size: 2rem;
+    background-image: linear-gradient(90deg, #7CC37A, #FFBF67, #FFE887);
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    background-position: left bottom;
+    transition: background-size 700ms ease-in-out;
+}
+
+.animated-line:hover {
+    background-size: 100% 2px;
+}
+
+.nav-link {
+    color: black !important;
+    font-family: var(--font-sans) !important;
+    font-weight: 400 !important;
+}
+
+/* fin de header navbar */
+
+/* Inicio del contenedor search y carrito */
+main {
+    height: 100vh;
+    padding-top: 15px;
+}
+
+.contenedor-buscador-carrito{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+}
+
+.container-buscador{
+    width: 50% !important;
+    height: 10vh;
+    padding: 20px;
+}
+
+.container-dropdown{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    padding: 20px;
+}
+
+.btn-carrito{
+    background-color: #7CC37A !important;
+    margin-right: 20px;
+}
+
+.titulo-tienda{
+    font-weight: 700;
+}
+
+/* Fin de contenedor de search y carrito */
+
+/* Inicio de contenedor de categorias */
+.contenedor-categorias{
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-tipos{
+    margin-bottom: 20px !important;
+    width: 100;
+    display: flex;
+    flex-direction: column !important;
+    padding-bottom: 10px;
+    border-bottom: #7CC37A 1px solid;
+}
+
+.contenedor-formato{
+    margin-bottom: 20px !important;
+    display: flex;
+    flex-direction: column !important;
+    padding-bottom: 10px;
+    border-bottom: #7CC37A 1px solid;
+}
+
+.contenedor-marcas{
+    margin-bottom: 20px;
+    display: flex ;
+    flex-direction: column !important;
+    padding-bottom: 10px;
+}
+
+.nav-item{
+    display: flex;
+}
+/* Fin del contenedor categorias */
+
+/* Inicio de cards ventas */
+
+.mt-50{
+
+    margin-top: 50px;
+}
+
+.mb-50{
+
+    margin-bottom: 50px;
+}
+
+.container-cards{
+    width: 80%;
+    padding: 20px;
+}
+
+.contenedor-cartas-categorias{
+    display: flex;
+    width: 100%;
+}
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .1875rem;
+}
+
+.card-img-actions {
+    position: relative;
+}
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.card-img{
+
+    width: 350px;
+}
+
+.star{
+        color: red;
+}
+
+.bg-cart {
+    background-color:orange;
+    color:#fff;
+}
+
+.bg-cart:hover {
+    
+    color:#fff;
+}
+
+.bg-buy {
+    background-color:green;
+    color:#fff;
+    padding-right: 29px;
+}
+.bg-buy:hover {
+    
+    color:#fff;
+}
+
+a{
+
+    text-decoration: none !important;
+}
+
+/* fin de cards ventas */
+
+/* comienzo media querry */
+@media screen and (min-width: 1100px){
+    .contenedor-categorias{
+        border-right: #7CC37A solid 2px;
+        padding: 20px;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenedor-tipos{
+        margin-bottom: 20px !important;
+        display: flex;
+        flex-direction: column !important;
+    }
+
+    .contenedor-formato{
+        margin-bottom: 20px !important;
+        display: flex;
+        flex-direction: column !important;
+    }
+
+    .contenedor-marcas{
+        margin-bottom: 20px;
+        display: flex ;
+        flex-direction: column !important;
+    }
+
+    .nav-item{
+        display: flex;
+    }
+}
