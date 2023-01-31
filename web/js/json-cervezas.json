@@ -7,7 +7,7 @@
         "precio": 300.0,
         "tipoCerveza": "LAGER",
         "fabricante": "Quilmes",
-        "img": "../assets/imagenes/catalogo/quilmes-clasica-porron.png",
+        "img": "../web/assets/imagenes/catalogo/quilmes-clasica-porron.png",
         "stock": 50,
         "estado": true,
         "presentacion": "BOTELLA"
@@ -20,7 +20,7 @@
         "precio": 260.0,
         "tipoCerveza": "LAGER",
         "fabricante": "Quilmes",
-        "img": "../assets/imagenes/catalogo/quilmes-clasica-lata.png",
+        "img": "../web/assets/imagenes/catalogo/quilmes-clasica-lata.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -33,7 +33,7 @@
         "precio": 300.0,
         "tipoCerveza": "LAGER",
         "fabricante": "Quilmes",
-        "img": "../assets/imagenes/catalogo/quilmes-clasica-litro.png",
+        "img": "../web/assets/imagenes/catalogo/quilmes-clasica-litro.png",
         "stock": 50,
         "estado": true,
         "presentacion": "BOTELLA"
@@ -46,7 +46,7 @@
         "precio": 288.0,
         "tipoCerveza": "STOUT",
         "fabricante": "Quilmes",
-        "img": "../assets/imagenes/catalogo/quilmes-stout-lata.png",
+        "img": "../web/assets/imagenes/catalogo/quilmes-stout-lata.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -59,7 +59,7 @@
         "precio": 288.0,
         "tipoCerveza": "STOUT",
         "fabricante": "Quilmes",
-        "img": "../assets/imagenes/catalogo/quilmes-stout-botella.png",
+        "img": "../web/assets/imagenes/catalogo/quilmes-stout-botella.png",
         "stock": 50,
         "estado": true,
         "presentacion": "BOTELLA"
@@ -72,7 +72,7 @@
         "precio": 288.0,
         "tipoCerveza": "STOUT",
         "fabricante": "Quilmes",
-        "img": "../assets/imagenes/catalogo/quilmes-bock-lata.png",
+        "img": "../web/assets/imagenes/catalogo/quilmes-bock-lata.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -85,7 +85,7 @@
         "precio": 288.0,
         "tipoCerveza": "STOUT",
         "fabricante": "Quilmes",
-        "img": "../assets/imagenes/catalogo/quilmes-bock-botella.png",
+        "img": "../web/assets/imagenes/catalogo/quilmes-bock-botella.png",
         "stock": 50,
         "estado": true,
         "presentacion": "BOTELLA"
@@ -98,7 +98,7 @@
         "precio": 200.0,
         "tipoCerveza": "STOUT",
         "fabricante": "Imperial",
-        "img": "../assets/imagenes/catalogo/imperial-stout-lata.png",
+        "img": "../web/assets/imagenes/catalogo/imperial-stout-lata.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -111,7 +111,7 @@
         "precio": 483.0,
         "tipoCerveza": "STOUT",
         "fabricante": "Imperial",
-        "img": "../assets/imagenes/catalogo/imperial-stout-botella.png",
+        "img": "../web/assets/imagenes/catalogo/imperial-stout-botella.png",
         "stock": 50,
         "estado": true,
         "presentacion": "BOTELLA"
@@ -124,7 +124,7 @@
         "precio": 490.0,
         "tipoCerveza": "LAGER",
         "fabricante": "Imperial",
-        "img": "../assets/imagenes/catalogo/imperial-lager-lata.png",
+        "img": "../web/assets/imagenes/catalogo/imperial-lager-lata.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -137,7 +137,7 @@
         "precio": 490.0,
         "tipoCerveza": "LAGER",
         "fabricante": "Imperial",
-        "img": "../assets/imagenes/catalogo/imperial-lager-botella.png",
+        "img": "../web/assets/imagenes/catalogo/imperial-lager-botella.png",
         "stock": 50,
         "estado": true,
         "presentacion": "BOTELLA"
@@ -150,7 +150,7 @@
         "precio": 299.0,
         "tipoCerveza": "LAGER",
         "fabricante": "Imperial",
-        "img": "../assets/imagenes/catalogo/imperial-roja-lata.png",
+        "img": "../web/assets/imagenes/catalogo/imperial-roja-lata.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -163,7 +163,7 @@
         "precio": 533.0,
         "tipoCerveza": "LAGER",
         "fabricante": "Imperial",
-        "img": "../assets/imagenes/catalogo/imperial-roja-botella.png",
+        "img": "../web/assets/imagenes/catalogo/imperial-roja-botella.png",
         "stock": 50,
         "estado": true,
         "presentacion": "BOTELLA"
@@ -176,7 +176,7 @@
         "precio": 385.0,
         "tipoCerveza": "LAGER",
         "fabricante": "La Paloma",
-        "img": "../assets/imagenes/catalogo/lapaloma-golden-coffee.png",
+        "img": "../web/assets/imagenes/catalogo/lapaloma-golden-coffee.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -189,7 +189,7 @@
         "precio": 376.0,
         "tipoCerveza": "IPA",
         "fabricante": "La Paloma",
-        "img": "../assets/imagenes/catalogo/lapaloma-ruta11.png",
+        "img": "../web/assets/imagenes/catalogo/lapaloma-ruta11.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -202,7 +202,7 @@
         "precio": 337.0,
         "tipoCerveza": "ALE",
         "fabricante": "La Paloma",
-        "img": "../assets/imagenes/catalogo/lapaloma-cream-ale.png",
+        "img": "../web/assets/imagenes/catalogo/lapaloma-cream-ale.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -215,7 +215,7 @@
         "precio": 337.0,
         "tipoCerveza": "ALE",
         "fabricante": "La Paloma",
-        "img": "../assets/imagenes/catalogo/lapaloma-amber-ale.png",
+        "img": "../web/assets/imagenes/catalogo/lapaloma-amber-ale.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -228,7 +228,7 @@
         "precio": 350.0,
         "tipoCerveza": "STOUT",
         "fabricante": "La Paloma",
-        "img": "../assets/imagenes/catalogo/lapaloma-export-stout.png",
+        "img": "../web/assets/imagenes/catalogo/lapaloma-export-stout.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -241,7 +241,7 @@
         "precio": 350.0,
         "tipoCerveza": "IPA",
         "fabricante": "La Paloma",
-        "img": "../assets/imagenes/catalogo/lapaloma-summer-ipa.png",
+        "img": "../web/assets/imagenes/catalogo/lapaloma-summer-ipa.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -254,7 +254,7 @@
         "precio": 420.0,
         "tipoCerveza": "LAGER",
         "fabricante": "Antares",
-        "img": "../assets/imagenes/catalogo/antares-kolsch-botella.png",
+        "img": "../web/assets/imagenes/catalogo/antares-kolsch-botella.png",
         "stock": 50,
         "estado": true,
         "presentacion": "BOTELLA"
@@ -267,7 +267,7 @@
         "precio": 390.0,
         "tipoCerveza": "LAGER",
         "fabricante": "Antares",
-        "img": "../assets/imagenes/catalogo/antares-kolsch-lata.png",
+        "img": "../web/assets/imagenes/catalogo/antares-kolsch-lata.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -280,7 +280,7 @@
         "precio": 420.0,
         "tipoCerveza": "ALE",
         "fabricante": "Antares",
-        "img": "../assets/imagenes/catalogo/antares-scotch-botella.png",
+        "img": "../web/assets/imagenes/catalogo/antares-scotch-botella.png",
         "stock": 50,
         "estado": true,
         "presentacion": "BOTELLA"
@@ -293,7 +293,7 @@
         "precio": 390.0,
         "tipoCerveza": "ALE",
         "fabricante": "Antares",
-        "img": "../assets/imagenes/catalogo/antares-scotch-lata.png",
+        "img": "../web/assets/imagenes/catalogo/antares-scotch-lata.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -306,7 +306,7 @@
         "precio": 420.0,
         "tipoCerveza": "PORTER",
         "fabricante": "Antares",
-        "img": "../assets/imagenes/catalogo/antares-porter-botella.png",
+        "img": "../web/assets/imagenes/catalogo/antares-porter-botella.png",
         "stock": 50,
         "estado": true,
         "presentacion": "BOTELLA"
@@ -319,7 +319,7 @@
         "precio": 460.0,
         "tipoCerveza": "STOUT",
         "fabricante": "Antares",
-        "img": "../assets/imagenes/catalogo/antares-stout-botella.png",
+        "img": "../web/assets/imagenes/catalogo/antares-stout-botella.png",
         "stock": 50,
         "estado": true,
         "presentacion": "BOTELLA"
@@ -332,7 +332,7 @@
         "precio": 460.0,
         "tipoCerveza": "HONEY",
         "fabricante": "Antares",
-        "img": "../assets/imagenes/catalogo/antares-honey-botella.png",
+        "img": "../web/assets/imagenes/catalogo/antares-honey-botella.png",
         "stock": 50,
         "estado": true,
         "presentacion": "BOTELLA"
@@ -345,7 +345,7 @@
         "precio": 400.0,
         "tipoCerveza": "HONEY",
         "fabricante": "Antares",
-        "img": "../assets/imagenes/catalogo/antares-honey-lata.png",
+        "img": "../web/assets/imagenes/catalogo/antares-honey-lata.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -358,7 +358,7 @@
         "precio": 430.0,
         "tipoCerveza": "ALE",
         "fabricante": "Antares",
-        "img": "../assets/imagenes/catalogo/antares-ipa-lata.png",
+        "img": "../web/assets/imagenes/catalogo/antares-ipa-lata.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -371,7 +371,7 @@
         "precio": 460.0,
         "tipoCerveza": "LAGER",
         "fabricante": "Antares",
-        "img": "../assets/imagenes/catalogo/antares-barleywine-botella.png",
+        "img": "../web/assets/imagenes/catalogo/antares-barleywine-botella.png",
         "stock": 50,
         "estado": true,
         "presentacion": "BOTELLA"
@@ -384,7 +384,7 @@
         "precio": 430.0,
         "tipoCerveza": "IPA",
         "fabricante": "Antares",
-        "img": "../assets/imagenes/catalogo/antares-caravana-ipa.png",
+        "img": "../web/assets/imagenes/catalogo/antares-caravana-ipa.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -397,7 +397,7 @@
         "precio": 410.0,
         "tipoCerveza": "LAGER",
         "fabricante": "Gluck",
-        "img": "../assets/imagenes/catalogo/gluck-faro-irish.png",
+        "img": "../web/assets/imagenes/catalogo/gluck-faro-irish.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -410,7 +410,7 @@
         "precio": 460.0,
         "tipoCerveza": "HONEY",
         "fabricante": "Gluck",
-        "img": "../assets/imagenes/catalogo/gluck-honey.png",
+        "img": "../web/assets/imagenes/catalogo/gluck-honey.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -423,7 +423,7 @@
         "precio": 410.0,
         "tipoCerveza": "PORTER",
         "fabricante": "Gluck",
-        "img": "../assets/imagenes/catalogo/gluck-robust-porter.png",
+        "img": "../web/assets/imagenes/catalogo/gluck-robust-porter.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -436,7 +436,7 @@
         "precio": 460.0,
         "tipoCerveza": "IPA",
         "fabricante": "Gluck",
-        "img": "../assets/imagenes/catalogo/gluck-templodorado-ipa.png",
+        "img": "../web/assets/imagenes/catalogo/gluck-templodorado-ipa.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -449,7 +449,7 @@
         "precio": 450.0,
         "tipoCerveza": "IPA",
         "fabricante": "Gluck",
-        "img": "../assets/imagenes/catalogo/gluck-majestad-ipa.png",
+        "img": "../web/assets/imagenes/catalogo/gluck-majestad-ipa.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -462,7 +462,7 @@
         "precio": 400.0,
         "tipoCerveza": "LAGER",
         "fabricante": "Gluck",
-        "img": "../assets/imagenes/catalogo/gluck-homero-lager.png",
+        "img": "../web/assets/imagenes/catalogo/gluck-homero-lager.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -475,7 +475,7 @@
         "precio": 410.0,
         "tipoCerveza": "LAGER",
         "fabricante": "Gluck",
-        "img": "../assets/imagenes/catalogo/gluck-weeheavy-lager.png",
+        "img": "../web/assets/imagenes/catalogo/gluck-weeheavy-lager.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -488,7 +488,7 @@
         "precio": 410.0,
         "tipoCerveza": "LAGER",
         "fabricante": "Gluck",
-        "img": "../assets/imagenes/catalogo/gluck-wtfmonkey-lager.png",
+        "img": "../web/assets/imagenes/catalogo/gluck-wtfmonkey-lager.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -501,7 +501,7 @@
         "precio": 410.0,
         "tipoCerveza": "LAGER",
         "fabricante": "Gluck",
-        "img": "../assets/imagenes/catalogo/gluck-lucerna-lager.png",
+        "img": "../web/assets/imagenes/catalogo/gluck-lucerna-lager.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -514,7 +514,7 @@
         "precio": 468.0,
         "tipoCerveza": "IPA",
         "fabricante": "Temple",
-        "img": "../assets/imagenes/catalogo/temple-wolf-ipa.png",
+        "img": "../web/assets/imagenes/catalogo/temple-wolf-ipa.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -527,7 +527,7 @@
         "precio": 401.0,
         "tipoCerveza": "LAGER",
         "fabricante": "Temple",
-        "img": "../assets/imagenes/catalogo/temple-cosmica-lager.png",
+        "img": "../web/assets/imagenes/catalogo/temple-cosmica-lager.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -540,7 +540,7 @@
         "precio": 580.0,
         "tipoCerveza": "HONEY",
         "fabricante": "Temple",
-        "img": "../assets/imagenes/catalogo/temple-honey.png",
+        "img": "../web/assets/imagenes/catalogo/temple-honey.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -553,7 +553,7 @@
         "precio": 468.0,
         "tipoCerveza": "ALE",
         "fabricante": "Temple",
-        "img": "../assets/imagenes/catalogo/temple-scottish.png",
+        "img": "../web/assets/imagenes/catalogo/temple-scottish.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -566,7 +566,7 @@
         "precio": 600.0,
         "tipoCerveza": "LAGER",
         "fabricante": "Temple",
-        "img": "../assets/imagenes/catalogo/temple-golden.png",
+        "img": "../web/assets/imagenes/catalogo/temple-golden.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -579,7 +579,7 @@
         "precio": 600.0,
         "tipoCerveza": "STOUT",
         "fabricante": "Temple",
-        "img": "../assets/imagenes/catalogo/temple-blacksoul-stout.png",
+        "img": "../web/assets/imagenes/catalogo/temple-blacksoul-stout.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -592,7 +592,7 @@
         "precio": 600.0,
         "tipoCerveza": "APA",
         "fabricante": "Temple",
-        "img": "../assets/imagenes/catalogo/temple-flow-apa.png",
+        "img": "../web/assets/imagenes/catalogo/temple-flow-apa.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -604,8 +604,8 @@
         "descripcion": "Cerveza legendaria de larga data en la cultura cerveza del norte aleman. Esta lager destaca por su elegancia y sutileza, por lo que se la conoce como la Pilsen negra. Las maltas oscuras aportan su color sepia profundo y notas sutiles a pan tostado y chocolate con un buen balance de lupulo pero de extrema delicadeza. De alcohol moderado, cuerpo medio bajo y final seco, es una cerveza amable y de alta tomabilidad.",
         "precio": 379.0,
         "tipoCerveza": "STOUT",
-        "fabricante": "Penon del Aguila",
-        "img": "../assets/imagenes/catalogo/schwarzbier-penon-aguila.png",
+        "fabricante": "Peñon del Águila",
+        "img": "../web/assets/imagenes/catalogo/schwarzbier-penon-aguila.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -617,8 +617,8 @@
         "descripcion": "Esta lager de inteso colo ambar, con destellos de rubi y una espuma compacta y clara presenta un aroma complejo, donde la fruta tropical, durazno y citricos de los lupulos americanos se combinan con notas a caramelo de las maltas especiales.",
         "precio": 440.0,
         "tipoCerveza": "LAGER",
-        "fabricante": "Penon del Aguila",
-        "img": "../assets/imagenes/catalogo/penondelaguila-amber-lager.png",
+        "fabricante": "Peñon del Águila",
+        "img": "../web/assets/imagenes/catalogo/penondelaguila-amber-lager.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -630,8 +630,8 @@
         "descripcion": "Pensada para aliviar el efecto del inteso calor, es de cuerpo ligero por el agregado de maiz como adjuinto, de conmtenido alcohgolico restringido y el amargor justo para dar el balance final. Se caracteriza por su extrema tomabilidad, por su delicado balance y por las notas ligeramente dulces de maiz.",
         "precio": 370.0,
         "tipoCerveza": "LAGER",
-        "fabricante": "Penon del Aguila",
-        "img": "../assets/imagenes/catalogo/penondelaguila-mexican-lager.png",
+        "fabricante": "Peñon del Águila",
+        "img": "../web/assets/imagenes/catalogo/penondelaguila-mexican-lager.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -643,8 +643,8 @@
         "descripcion": "Sobre la base de una lager tipo Helles, agregamos miel natural en la fermentacion haciendo que esta cerveza de inteso color dorado presente el aroma y sabor caracteristicos del dulce nectar con un contenido alcoholico algo mayuor y un cuerpo mas liviano que la media. Con delicadas notas licorosas y el sutil dulzor de la miel es una cerveza elegante, ligera en boca y de bajo amargor",
         "precio": 370.0,
         "tipoCerveza": "HONEY",
-        "fabricante": "Penon del Aguila",
-        "img": "../assets/imagenes/catalogo/penondelaguila-honigbier-honey.png",
+        "fabricante": "Peñon del Águila",
+        "img": "../web/assets/imagenes/catalogo/penondelaguila-honigbier-honey.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -656,8 +656,8 @@
         "descripcion": "Esta cerveza de color cobre cristalino, destaca por su perfil orientado a la maltas especiales que aportan delicadas notas a caramelo y un leve tostado. Los lupulos nobles proporcionan el balance en esta cerveza limpia, de bajo amargor, alcohol restringido y un final relativamente seco.",
         "precio": 370.0,
         "tipoCerveza": "LAGER",
-        "fabricante": "Penon del Aguila",
-        "img": "../assets/imagenes/catalogo/oktoberfest-penon-aguila.png",
+        "fabricante": "Peñon del Águila",
+        "img": "../web/assets/imagenes/catalogo/oktoberfest-penon-aguila.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"
@@ -669,8 +669,8 @@
         "descripcion": "Fermentada con levadura del tipo Ale pero a baja temperatura, lo que aporta un perfil caracteristico con notas a fruta y azufradas similares a las de un vino blanco. De color dorado palido, su perfil de malta es extremadamente limpio y encuetra un delicado equilibrio con el sutil amargor y sabor floral de los lupulos nobles alemanes.",
         "precio": 379.0,
         "tipoCerveza": "ALE",
-        "fabricante": "Penon del Aguila",
-        "img": "../assets/imagenes/catalogo/kolsch-penon-aguila.png",
+        "fabricante": "Peñon del Águila",
+        "img": "../web/assets/imagenes/catalogo/kolsch-penon-aguila.png",
         "stock": 50,
         "estado": true,
         "presentacion": "LATA"

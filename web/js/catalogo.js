@@ -19,7 +19,7 @@ createApp({
     },
     methods: {
         loadData(){
-            axios.get("../js/json-cervezas.json")
+            axios.get("./js/json-cervezas.json")
             .then(response =>{
                 console.log(response);
                 this.json = response.data;
@@ -30,7 +30,7 @@ createApp({
                 this.imperial = this.cervezasLata.filter(cerveza => cerveza.fabricante === "Imperial");
                 this.quilmes = this.cervezasLata.filter(cerveza => cerveza.fabricante === "Quilmes");
                 this.temple = this.cervezasLata.filter(cerveza => cerveza.fabricante === "Temple");
-                this.penonDelAguila = this.cervezasLata.filter(cerveza => cerveza.fabricante === "Penon del Aguila")
+                this.penonDelAguila = this.cervezasLata.filter(cerveza => cerveza.fabricante === "Peñon del Águila")
                 console.log(response.data.data)
                 console.log(this.json)
                 console.log(this.cervezasLata)
@@ -38,6 +38,7 @@ createApp({
                 console.log(this.gluck)
                 console.log(this.imperial)
                 console.log(this.quilmes)
+                console.log(this.penonDelAguila);
             })
 /*             .then((response) =>{
                 this.json = response.data.data;

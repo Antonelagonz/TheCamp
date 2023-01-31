@@ -237,7 +237,6 @@ h2 {
     border-radius: 8px;
     transition: background 0.2s;
     font-weight: 500;
-
 }
 
 .card:hover .card-link {
