@@ -240,9 +240,33 @@ main {
 }
 
 .card-img {
-
-    width: 350px;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    text-align: center;
 }
+.info-card{
+    position: absolute;
+    text-align: center;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-img:hover{
+    backdrop-filter:brightness(80%);
+    transition: all 1s;
+}
+
+.card-img:hover + .info-card{
+    display:block;
+    
+}
+.info-card:hover{
+    display: block;
+}
+
 
 .star {
     color: red;
@@ -274,22 +298,18 @@ a {
     text-decoration: none !important;
 }
 
+/*inicio modal*/
+.modal-text{
+    text-align: justify;
+}
+
+.imagen-modal{
+    width: 250px;
+    height: 250px;
+}
 
 /*media query cards*/
-@media screen and (max-width: 1023px){
-    .container-cards {
-        width: 100%;
-        padding-left: 1.5rem;
-        padding-top: 1rem;
-        font-family: var(--font-sans);
-        display: flex;
-        justify-content: center;
-    }
-    .card-cervezas > .row {
-        display: flex;
-        justify-content: center;
-    }
-}
+
 /* fin de cards ventas */
 
 /* comienzo media querry */
@@ -326,15 +346,25 @@ a {
 
 }
 
-@media screen and (max-width: 1099) {
+@media screen and (max-width: 1099px) {
+    .btn-carrito{
+        margin-bottom: 2rem !important;
+    }
+    .container-cards {
+        min-width: 100% !important;
+        padding-left: 1.5rem;
+        padding-top: 1rem;
+        font-family: var(--font-sans);
+        display: flex !important;
+        justify-content: center !important;
+    }
     .card-cervezas-padre{
         display: flex !important;
         justify-content: center !important;
     }
-    .btn-carrito{
-        margin-bottom: 2rem !important;
-    }
+    
 }
+
 
 @media screen and (max-width:426px){
 

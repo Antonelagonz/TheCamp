@@ -20,7 +20,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg nav-principal shadow ">
+        <nav class="navbar navbar-expand-xl nav-principal shadow ">
             <div class="container-fluid">
                 <a href="#">
                     <img src="./assets/imagenes/logo-nombre-negro.png" class="imagen-navbar navbar-brand"
@@ -98,11 +98,12 @@
 
     <main class="main">
         <div class="m-0">
-            <h1 class="w-100 d-flex justify-content-center p-3 m-0" style="background-color: #FFFAF0;">Bienvenido a nuestra tienda <i class="bi bi-bag ms-2 text-dark"></i>
+            <h1 class="w-100 d-flex justify-content-center p-3 m-0 text" style="background-color: #FFFAF0; text-align: center;">Bienvenido a nuestra tienda <i class="bi bi-bag ms-2 text-dark"></i>
             </h1>
         </div>
         <div id="app">
             {{filtro}}
+
             <div class="contenedor-buscador-carrito">
                 <div class="input-group container-buscador">
                     <div class="form-outline">
@@ -144,14 +145,14 @@
                     <nav class="navbar navbar-expand-xl">
                         <div class="contenedor">
                             <h3 class="navbar-brand fs-4 my-4" href="#">Categorías<i class="bi bi-tags-fill"></i>
-                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                <button class="navbar-toggler bg-light m-1" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarNavcategorias" aria-controls="navbarNavcategorias"
-                                aria-expanded="false" aria-label="Toggle navigation"><iconify-icon icon="ic:baseline-plus"></iconify-icon>
+                                aria-expanded="false" aria-label="Toggle navigation"><iconify-icon icon="ic:baseline-plus" class="mt-1"></iconify-icon>
                             </button></h3>
                             
                             <div class="collapse navbar-collapse navbarCategorias" id="navbarNavcategorias">
                                 <div>
-                                    <button class="btn btn-filtros fs-5 text-center bg-light" type="button" data-bs-toggle="collapse"
+                                    <button class="btn btn-filtros fs-5 text-center bg-light mb-2" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseTipo" aria-expanded="false"
                                         aria-controls="collapseExample">Tipo</button>
 
@@ -168,9 +169,9 @@
                                         </div>
                                     </div>
 
-                                    <button class="btn btn-filtros bg-light fs-5 text-center" type="button" data-bs-toggle="collapse"
+                                    <button class="btn btn-filtros bg-light fs-5 text-center mb-2" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapsePresentacion" aria-expanded="false"
-                                        aria-controls="collapseExample">Marca</button>
+                                        aria-controls="collapseExample">Presentacion</button>
 
                                     <div class="navbar-nav contenedor-formato">
                                         <div class="input-group mb-1 nav-item collapse" id="collapsePresentacion">
@@ -183,9 +184,9 @@
                                         </div>
                                     </div>
 
-                                    <button class="btn btn-filtros fs-5 text-center bg-light" type="button" data-bs-toggle="collapse"
+                                    <button class="btn btn-filtros fs-5 text-center bg-light mb-2" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseMarca" aria-expanded="false"
-                                        aria-controls="collapseExample">Presentación</button>
+                                        aria-controls="collapseExample">Marca</button>
 
                                     <div class="navbar-nav contenedor-marcas">
                                         <div class="input-group mb-1 nav-item collapse" id="collapseMarca">
@@ -213,20 +214,23 @@
                 </div>
 
                 <div class="container-cards">
-                    <div class="row card-cervezas-padre">
+                    <div class="card-cervezas-padre row">
                         <div class="card card-cervezas col-xl-3 col-lg-4 col-md-6 col-xs-12"
-                            v-for="producto of cervezasFiltradas">
-                            <div class="card-body">
+                            v-for="(producto,index) of cervezas">
+                            <div class="card-body align-items-center">
+                                <a class="card-hover" data-bs-toggle="modal" data-bs-target="#staticBackdrop" @click="buscarCervezaIndex(index)">
                                 <div class="card-img">
                                     <img :src="producto.img" class="card-img img-fluid" alt="">
+                                    <p class="info-card fs-6 fw-bold p-1 bg-light rounded text-dark">Leer más</p>
                                 </div>
+                                </a>
                             </div>
                             <div class="card-body bg-light text-center">
                                 <div class="mb-2">
                                     <h6 class="fw-bold mb-2">{{producto.nombre}}</h6>
                                     <h6 href="#" class="fs-6" data-abc="true">{{producto.fabricante}} -
                                         {{producto.tipoCerveza}} - {{producto.presentacion}}</h6>
-                                    <p class="text-secondary">ABV: {{producto.abv}} - IBU: {{producto.ibu}}</p>
+                                    <p class="text-secondary">ABV: {{producto.abv}}% - IBU: {{producto.ibu}}</p>
                                 </div>
                                 <h4 class="mb-2 font-weight-semibold">${{producto.precio}}</h4>
                                 <div class="card-link-wrapper">
@@ -236,6 +240,39 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-fullscreen-down">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h1 class="modal-title fs-4 fw-bold" id="staticBackdropLabel">{{productoActual.nombre}} - {{productoActual.fabricante}}</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex justify-content-center">
+                                <img :src="productoActual.img" class="imagen-modal">
+                            </div>
+                        <div class="modal-text p-3">
+                            <p class="text-danger fw-bold" v-show="productoActual.stock <= 0">Sin stock</p>
+                            <p class="text-danger fw-bold" v-show="productoActual.stock > 0">En stock</p>
+                            <p class="text-danger fw-bold" v-show="productoActual.stock < 10">Últimas unidades!!</p>
+                            <p><b>Marca: </b>{{productoActual.fabricante}}</p>
+                            <p class="fw-bold">Tipo: {{productoActual.tipoCerveza}}  <iconify-icon inline icon="fluent-mdl2:separator"></iconify-icon>
+                                ABV: {{productoActual.abv}}%  <iconify-icon inline icon="fluent-mdl2:separator"></iconify-icon>
+                                    IBU: {{productoActual.ibu}}</p>
+                            <p><b>Descripcion: </b>{{productoActual.descripcion}}</p>
+                            <p><b>Precio: ${{productoActual.precio}}</b></p>
+                        </div>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-danger p-2 rounded" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-success p-2 rounded">Agregar al carrito</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </main>
