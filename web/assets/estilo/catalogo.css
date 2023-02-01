@@ -26,7 +26,7 @@
 /* inicio de header navbar */
 
 header {
-    background: url(../imagenes/catalogo/nav-background.png) no-repeat center center fixed;
+    background: url(../imagenes/nav-background.png) no-repeat center center fixed;
     width: 100%;
     height: 80vh;
     background-size: cover;
