@@ -30,9 +30,9 @@ body {
 /* inicio de header navbar */
 
 header {
-    background: url(../imagenes/nosotros/navNosotros.jpg) no-repeat center center fixed;
+    background: url(../Imagenes/nosotros/navNosotros.jpg) no-repeat center center fixed;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background-size: cover;
 }
 
@@ -266,11 +266,11 @@ header {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    background-image: url(../imagenes/card1.jpg);
+    background-image: url(../Imagenes/card1.jpg);
 }
 
 .cards-landing:nth-child(2):before {
-    background-image: url(../imagenes/card2.jpg);
+    background-image: url(../Imagenes/card2.jpg);
     object-fit: cover;
     background-repeat: no-repeat;
     background-size: cover;
@@ -278,7 +278,7 @@ header {
 }
 
 .cards-landing:nth-child(3):before {
-    background-image: url(../imagenes/card3.png);
+    background-image: url(../Imagenes/card3.png);
     object-fit: cover;
     background-repeat: no-repeat;
     background-size: cover;
@@ -286,7 +286,7 @@ header {
 }
 
 .cards-landing:nth-child(4):before {
-    background-image: url(../imagenes/card4.jpg);
+    background-image: url(../Imagenes/card4.jpg);
     object-fit: cover;
     background-repeat: no-repeat;
     background-size: cover;
@@ -303,7 +303,6 @@ header {
     transition: transform var(--d) var(--e);
     z-index: 1;
     text-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-
 }
 
 .content>*+* {
@@ -367,6 +366,35 @@ header {
     }
 }
 
+@media screen and (min-width: 360px) and (max-width: 600px) {
+    .texto-info-inicio {
+        height: 30vh;
+    }
+
+    .page-content {
+        min-height: 200vh;
+    }
+
+    .navbar-toggler {
+        background-color: rgba(149, 144, 144, 0.42) !important;
+    }
+
+    .navbar-collapse {
+        background-color: rgba(149, 144, 144, 0.42) !important;
+        border-radius: 1rem !important;
+    }
+
+    .contenedor-general-bienvenida {
+        width: 100%;
+    }
+
+    .contenedor-bienvenida {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+
 /* inicio animacion cards landing responsive */
 @media (hover: hover) and (min-width: 600px) {
     .cards-landing:after {
@@ -424,6 +452,10 @@ header {
 
 
 /* inicio style footer */
+.ancor-footer{
+    color: white !important;
+}
+
 .contacto-columna {
     display: flex;
     flex-direction: column;

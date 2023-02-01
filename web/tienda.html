@@ -47,7 +47,7 @@
                             <a class="nav-link animated-line fs-5" href="./contacto.html">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link animated-line fs-5" href="./tienda.html">Tienda</a>
+                            <a class="nav-link animated-line fs-5" href="#">Tienda</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link animated-line fs-5" href="./login-register.html"><iconify-icon
@@ -98,8 +98,7 @@
 
     <main class="main">
         <div class="m-0">
-            <h1 class="w-100 d-flex justify-content-center p-3 m-0 text" style="background-color: #FFFAF0; text-align: center;">Bienvenido a nuestra tienda <i class="bi bi-bag ms-2 text-dark"></i>
-            </h1>
+            <h1 class="w-100 d-flex justify-content-center p-3 m-0 text" style="background-color: #FFEED6; text-align: center;">Bienvenido a nuestra tienda <i class="bi bi-bag ms-2 text-dark"></i></h1>
         </div>
         <div id="app">
             {{filtro}}
@@ -107,7 +106,7 @@
             <div class="contenedor-buscador-carrito">
                 <div class="input-group container-buscador">
                     <div class="form-outline">
-                        <h3 class="my-2">Filtrar <i class="bi bi-funnel-fill"></i><br></h3>
+                        <h3 class="my-2 text-dark"><span class="navfiltro-titulo text-dark">Filtrar</span> <i class="bi bi-funnel-fill ps-3"></i><br></h3>
                         <input id="search-focus" type="search" id="search" role="search" class="form-control"
                             placeholder="Buscar cerveza..." v-model="filtroInput">
                     </div>
@@ -143,18 +142,51 @@
                 <div class="contenedor-categorias">
                     <!-- CATEGORIAS-->
                     <nav class="navbar navbar-expand-xl">
-                        <div class="contenedor">
-                            <h3 class="navbar-brand fs-4 my-4" href="#">Categorías<i class="bi bi-tags-fill"></i>
-                                <button class="navbar-toggler bg-light m-1" type="button" data-bs-toggle="collapse"
+                        <div class="contenedor w-100">
+
+                            <h3 class="navbar-brand fs-4 my-4 text-dark"><span class="navfiltro-titulo text-dark">Categorías</span> <i class="bi bi-tags-fill ps-3"></i>
+                                <button class="btn-toggler-filtro navbar-toggler m-1" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarNavcategorias" aria-controls="navbarNavcategorias"
                                 aria-expanded="false" aria-label="Toggle navigation"><iconify-icon icon="ic:baseline-plus" class="mt-1"></iconify-icon>
                             </button></h3>
                             
                             <div class="collapse navbar-collapse navbarCategorias" id="navbarNavcategorias">
-                                <div>
-                                    <button class="btn btn-filtros fs-5 text-center bg-light mb-2" type="button" data-bs-toggle="collapse"
+                                <div class="contenedor-filtros">
+                                    <button class="btn btn-filtros fs-5 mb-2" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapsePresentacion" aria-expanded="false"
+                                    aria-controls="collapseExample"> <span class="d-flex"><p class="m-0">Presentación</p><i class="bi bi-filter ms-auto"></i></span>
+                                </button>
+                                <div class="navbar-nav contenedor-formato">
+                                    <div class="input-group mb-1 nav-item collapse" id="collapsePresentacion">
+                                        <ul class="list-group d-flex flex-column" >
+                                            <li class="list-group-item input-group-text d-flex flex-row my-1 checkfiltro" v-for="formato of setFormato">
+                                                <input type="checkbox" class="nav-link form-check-input m-1" autocomplete="off" :value="formato" v-model="checked">
+                                                <label class="fw-bold m-1">{{formato}}</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-filtros fs-5 text-start mb-2" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseMarca" aria-expanded="false"
+                                aria-controls="collapseExample"> <span class="d-flex"><p class="m-0">Marca</p><i class="bi bi-filter ms-auto"></i></span>
+                            </button>
+
+                                <div class="navbar-nav contenedor-marcas">
+                                    <div class="input-group mb-1 nav-item collapse" id="collapseMarca">
+                                        <ul class="list-group d-flex flex-column">
+                                            <li class="list-group-item input-group-text d-flex flex-row my-1" v-for="marca of setMarca">
+                                                <input type="checkbox" class="nav-link form-check-input m-1" autocomplete="off" :value="marca" v-model="checked">
+                                                <label class="fw-bold m-1">{{marca}}</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                    <button class="btn btn-filtros fs-5 text-start my-4" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseTipo" aria-expanded="false"
-                                        aria-controls="collapseExample">Tipo</button>
+                                        aria-controls="collapseExample"> <span class="d-flex"><p class="m-0">Tipo</p><i class="bi bi-filter ms-auto"></i></span>  
+                                    </button>
 
                                     <div class="navbar-nav contenedor-tipos">
                                         <div class="input-group mb-1 nav-item collapse" id="collapseTipo">
@@ -166,45 +198,6 @@
                                                     <label class="fw-bold m-1">{{tipo}}</label>
                                                 </li>
                                             </ul>
-                                        </div>
-                                    </div>
-
-                                    <button class="btn btn-filtros bg-light fs-5 text-center mb-2" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapsePresentacion" aria-expanded="false"
-                                        aria-controls="collapseExample">Presentacion</button>
-
-                                    <div class="navbar-nav contenedor-formato">
-                                        <div class="input-group mb-1 nav-item collapse" id="collapsePresentacion">
-                                            <ul class="list-group d-flex flex-column" >
-                                                <li class="list-group-item input-group-text d-flex flex-row my-1" v-for="formato of setFormato">
-                                                    <input type="checkbox" class="nav-link form-check-input m-1" autocomplete="off" :value="formato" v-model="checked">
-                                                    <label class="fw-bold m-1">{{formato}}</label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <button class="btn btn-filtros fs-5 text-center bg-light mb-2" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseMarca" aria-expanded="false"
-                                        aria-controls="collapseExample">Marca</button>
-
-                                    <div class="navbar-nav contenedor-marcas">
-                                        <div class="input-group mb-1 nav-item collapse" id="collapseMarca">
-                                            <ul class="list-group d-flex flex-column">
-                                                <li class="list-group-item input-group-text d-flex flex-row my-1" v-for="marca of setMarca">
-                                                    <input type="checkbox" class="nav-link form-check-input m-1" autocomplete="off" :value="marca" v-model="checked">
-                                                    <label class="fw-bold m-1">{{marca}}</label>
-                                                </li>
-                                            </ul>
-
-                                            <!-- <div class="d-flex flex-column">
-                                                <div class="input-group-text" v-for="marca of setMarca">
-                                                    <label>
-                                                        <input type="checkbox" class="nav-link form-check-input" checked
-                                                            autocomplete="on" :value="marca"
-                                                            v-model="checked">{{marca}}</label>
-                                                </div>
-                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -221,21 +214,22 @@
                                 <a class="card-hover" data-bs-toggle="modal" data-bs-target="#staticBackdrop" @click="buscarCervezaIndex(index)">
                                 <div class="card-img">
                                     <img :src="producto.img" class="card-img img-fluid" alt="">
-                                    <p class="info-card fs-6 fw-bold p-1 bg-light rounded text-dark">Leer más</p>
+                                    <btn class="info-card fs-6 fw-bold p-1 bg-light rounded text-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop" @click="buscarCervezaIndex(index)">Leer más</btn>
                                 </div>
                                 </a>
                             </div>
-                            <div class="card-body bg-light text-center">
-                                <div class="mb-2">
+                            <div class="card-body text-center p-0 m-0">
+                                <div class="mb-2 card-text pt-2">
                                     <h6 class="fw-bold mb-2">{{producto.nombre}}</h6>
                                     <h6 href="#" class="fs-6" data-abc="true">{{producto.fabricante}} -
                                         {{producto.tipoCerveza}} - {{producto.presentacion}}</h6>
-                                    <p class="text-secondary">ABV: {{producto.abv}}% - IBU: {{producto.ibu}}</p>
+                                    <p class="text-secondary mb-2">ABV: {{producto.abv}}% - IBU: {{producto.ibu}}</p>
+                                    <h4 class=" fw-bold">${{producto.precio}}</h4>
+                                    <div class="card-link-wrapper">
+                                        <a href="" class="card-link text-uppercase btn">Agregar al carrito</a>
+                                    </div>
                                 </div>
-                                <h4 class="mb-2 font-weight-semibold">${{producto.precio}}</h4>
-                                <div class="card-link-wrapper">
-                                    <a href="" class="card-link text-uppercase btn">Agregar al carrito</a>
-                                </div>
+
                             </div>
                         </div>
                     </div>
