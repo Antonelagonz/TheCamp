@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/estilo/carrito.css">
+    <link rel="shortcut icon" href="./assets/imagenes/LOGO-CERVECERIA.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>The Camp || Carrito</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-white">
+            <div class="container-fluid">
+                <a href="#">
+                    <img src="./assets/imagenes/logo-nombre-negro.png" class="imagen-navbar navbar-brand"
+                        alt="Logo the camp">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link animated-line fs-5" aria-current="page" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link animated-line fs-5" href="./nosotros.html">Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link animated-line fs-5" href="./catalogo.html">Catalogo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link animated-line fs-5" href="./contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link animated-line fs-5" href="./tienda.html">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link animated-line fs-5" href="./login-register.html"><iconify-icon
+                                    icon="ph:user-circle"></iconify-icon></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="h-100 contenedor-carrito-completo">
+        <div class="container py-5">
+            <div class="row d-flex justify-content-center my-4">
+                <div class="col-md-8">
+                    <div class="card mb-4">
+                        <div class="card-header py-3">
+                            <h5 class="mb-0">Carrito - (cantidad de productos)</h5>
+                        </div>
+                        <div class="card-body">
+                            <!-- Single item -->
+                            <div class="row">
+                                <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                                    <!-- Image -->
+                                    <div class="bg-image hover-overlay hover-zoom ripple rounded"
+                                        data-mdb-ripple-color="light">
+                                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/12a.webp"
+                                            class="w-100" alt="Blue Jeans Jacket" />
+                                        <a href="#!">
+                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                                        </a>
+                                    </div>
+                                    <!-- Image -->
+                                </div>
+
+                                <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                                    <!-- Data -->
+                                    <p><strong>Nombre de la Cerveza</strong></p>
+                                    <p>Tipo de cerveza:</p>
+                                    <p><Marca:/p>
+                                    <button type="button" class="btn btn-danger btn-sm me-1 mb-2"
+                                        data-mdb-toggle="tooltip" title="Remove item">
+                                        <iconify-icon icon="bi:trash"></iconify-icon>
+                                    </button>
+                                    <!-- Data -->
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                                    <!-- Quantity -->
+                                    <div class="contenedor-cantidad-botones">
+                                        <button class="btn botones-cantidad px-3 me-2"
+                                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                            <iconify-icon icon="mdi:minus"></iconify-icon>
+                                        </button>
+
+                                        <div class="form-outline">
+                                            <label class="form-label" for="form1">Cantidad</label>
+                                            <input id="form1" min="0" name="quantity" value="1" type="number" class="form-control">
+                                        </div>
+
+                                        <button class="btn botones-cantidad px-3 ms-2"
+                                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                            <iconify-icon icon="ph:plus-bold"></iconify-icon>
+                                        </button>
+                                    </div>
+                                    <!-- Quantity -->
+
+                                    <!-- Price -->
+                                    <p class="text-start text-md-center">
+                                        <strong> Precio: $</strong>
+                                    </p>
+                                    <!-- Price -->
+                                </div>
+                            </div>
+                            <hr class="my-4" />
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <p><strong>Por favor elegir la empresa de envio:</strong></p>
+                            <select name="empresasDeEnvio" id="empresasDeEnvio">
+                                <option value="andreani">Andreani</option>
+                                <option value="correoArgetino">Correo Argetino</option>
+                                <option value="oca">OCA</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card mb-4 mb-lg-0">
+                        <div class="card-body">
+                            <p><strong> Aceptamos </strong></p>
+                            <img class="me-2" width="45px"
+                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
+                                alt="Visa" />
+                            <img class="me-2" width="45px"
+                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
+                                alt="American Express" />
+                            <img class="me-2" width="45px"
+                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
+                                alt="Mastercard" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-header py-3">
+                            <h5 class="mb-0">Resumen</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li
+                                    class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                                    Cervezas
+                                    <span>$53.98</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                    Envio
+                                    <span>(empresa que eligio)</span>
+                                </li>
+                                <li
+                                    class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                                    <div>
+                                        <strong>Monto Total</strong>
+                                    </div>
+                                    <span><strong>$53.98</strong></span>
+                                </li>
+                            </ul>
+
+                            <button type="button" class="btn botones-finalizar btn-lg btn-block">
+                                Finalizar Compra
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center text-lg-start text-white ">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Links -->
+            <!--Grid row-->
+            <div class="row">
+                <!-- Grid column Horarios de Atención-->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h4 class="text-uppercase mb-4" style="text-shadow: black 2px 2px 2px;">Horarios de Atención</h4>
+            
+                    <table class="table text-center text-white">
+                    <tbody class="font-weight-normal">
+                        <tr>
+                        <td>Lun - Vie:</td>
+                        <td>09:00 - 21:00</td>
+                        </tr>
+                        <tr>
+                        <td>Sábado</td>
+                        <td>10:00 - 14:00</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>        
+                <!-- Grid column Contacto-->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 contacto-columna">
+                    <h4 class="text-uppercase mb-4 font-weight-bold" style="text-shadow: black 2px 2px 2px;">Contacto</h4>
+                    <a href="https://goo.gl/maps/ishuvxPQRbcFFEyR8" class="ancor-footer><iconify-icon icon="mdi:google-maps" style="color: white;" width="20" height="20"></iconify-icon> Argentina, Río Negro, El Bolson, Av. San Martín 2760
+                    </a>
+                    <a href="TheCampCervezas@gmail.com" class="ancor-footer><iconify-icon icon="fluent-emoji-high-contrast:e-mail" style="color: white;" width="20" height="20"></iconify-icon> the_CamP@gmail.com</a>
+                    <br>
+                    <a href="tel:+ 54 011 567 88" class="ancor-footer><iconify-icon icon="mdi:telephone-in-talk" style="color: white;" width="20" height="20"></iconify-icon> + 54 011 567 88</a>
+                </div>
+                <!-- Grid column Redes sociales-->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="text-shadow: black 2px 2px 2px;">Seguinos en redes:</h5>
+                    <!-- Facebook -->
+                    <a class="btn btn-outline-light btn-floating m-1 botones" href="https://www.facebook.com/" role="button"><img class="LogosFooter" src="./assets/imagenes/Facebook.png" alt="Faceboock Logo"></a>
+                    <!-- Instagram -->
+                    <a class="btn btn-outline-light btn-floating m-1 botones" href="https://www.instagram.com/" role="button"><img class="LogosFooter" src="./assets/imagenes/IG.png" alt="Instagram Logo"></a>
+                    <!-- Whatsapp -->
+                    <a class="btn btn-outline-light btn-floating m-1 botones" href="https://web.whatsapp.com/" role="button"><img class="LogosFooter" src="./assets/imagenes/Whatsapp.png" alt="Whatsapp Logo"></a>
+                </div>
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+    
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2023 Copyright:<a class="text-white">Grupo 3 - Cohort 37/38</a>
+            </div>
+        </footer>
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

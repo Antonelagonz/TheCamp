@@ -27,27 +27,27 @@ createApp({
         loadData(){
             axios.get("./js/json-cervezas.json")
             .then(response =>{
-                this.json = response.data;
-                this.cervezasFiltradas = this.json.map(nombreCerveza => nombreCerveza.nombre);
-                this.tipoDeCerveza = this.json.map(tipo => tipo.tipoCerveza);
-                this.formato = this.json.map(formato => formato.presentacion);
-                this.marca = this.json.map(marca => marca.fabricante);
-                this.funcionFiltroTipo();
-                this.funcionFiltroFormato();
-                this.funcionFiltroMarca();
+                this.cervezas = response.data;
+                this.cervezasFiltradas = this.cervezas.map(nombreCerveza => nombreCerveza.nombre);
+                this.tipoDeCerveza = this.cervezas.map(tipo => tipo.tipoCerveza);
+                this.formato = this.cervezas.map(formato => formato.presentacion);
+                this.marca = this.cervezas.map(marca => marca.fabricante);
+                this.mostrarTipoCerveza();
+                this.mostrarPresentacion();
+                this.mostrarFabricante();
                 /* this.searchbar(); */
             })
             .catch(error => console.error(error))
         },
-        funcionFiltroTipo(){
+        mostrarTipoCerveza(){
             this.setTipo = [... new Set(this.tipoDeCerveza)];
             console.log(this.setTipo);
         },
-            funcionFiltroFormato(){
+        mostrarPresentacion(){
             this.setFormato = [... new Set(this.formato)];
             console.log(this.setFormato);
         },
-        funcionFiltroMarca(){
+        mostrarFabricante(){
             this.setMarca = [... new Set(this.marca)];
             console.log(this.setMarca);
         },
@@ -57,13 +57,19 @@ createApp({
     },
     computed: {
         filtro(){
-            let filtroChecked = this.json.filter(tipo =>this.checked.includes(tipo.tipoCerveza))
-            this.cervezasFiltradas = filtroChecked.filter(name => name.nombre.toLowerCase().trim().includes(this.filtroInput.toLowerCase().trim()))
-            if(this.checked.length === 0){
-                this.cervezasFiltradas = this.json
-            }
+            let filtroChecked = this.cervezas
+                                    .filter(cerveza => this.checked.includes(cerveza.tipoCerveza) || this.checked.length == 0);
+            this.cervezasFiltradas = filtroChecked
+                                    .filter(cerveza => cerveza.nombre
+                                        .toLowerCase()
+                                        .trim()
+                                        .includes(this.filtroInput.toLowerCase().trim()));
+            // if(this.checked.length === 0 ){
+            //     this.cervezasFiltradas = this.cervezas;
+            // }
             console.log(this.cervezasFiltradas);
-            console.log(this.checked);
+            //console.log(this.checked);
+            console.log(this.filtroInput)
         }
     }
 }).mount('#app')
