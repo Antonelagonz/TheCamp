@@ -1,0 +1,432 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
+s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+figure, header, nav, section, article, aside, footer, figcaption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+header, nav, section, article, aside, footer, hgroup {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  background-color: #fff;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a {
+  text-decoration: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+ul {
+  margin-bottom: 0px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 25px;
+  color: #ffffff;
+}
+
+/* 
+---------------------------------------------
+global styles
+--------------------------------------------- 
+*/
+html,
+body {
+  background: #FFBF67
+  ;
+  font-family: 'Poppins', sans-serif;
+}
+
+::selection {
+  background: #edc93b;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #edc93b;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  html, body {
+    overflow-x: hidden;
+  }
+  .mobile-top-fix {
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+  .mobile-bottom-fix {
+    margin-bottom: 30px;
+  }
+  .mobile-bottom-fix-big {
+    margin-bottom: 60px;
+  }
+}
+
+.section-heading {
+  text-align: center;
+  margin-top: 140px;
+  margin-bottom: 80px;
+}
+
+.section-heading h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.section-heading h2 em {
+  font-style: normal;
+  color: #d4b332;
+}
+
+.section-heading img {
+  margin: 20px auto;
+}
+
+.dark-bg h2 {
+  color: #fff;
+}
+
+.dark-bg p {
+  color: #fff;
+}
+
+.main-button a {
+  display: inline-block;
+  font-size: 15px;
+  padding: 12px 20px;
+  background-color: #edc93b;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all .3s;
+  border-radius: 5px;
+}
+
+.main-button a:hover {
+  background-color: #5a5757;
+  color: #edc93b;
+  font-weight: 600;
+  opacity: 1;
+}
+
+
+
+/* 
+---------------------------------------------
+header
+--------------------------------------------- 
+*/
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  /* border: 1px solid red; */
+}
+
+nav {
+  background-color: #000000;
+  width: 100%;
+  height: 20vh;
+  background-size: cover;
+}
+
+.imagen-navbar {
+  width: 285px;
+  height: 100px;
+}
+
+.animated-line {
+  color: #ff0468;
+  margin: 10px 30px;
+  font-size: 2rem;
+  background-image: linear-gradient(90deg, #7CC37A, #FFBF67, #FFE887);
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  background-position: left bottom;
+  transition: background-size 700ms ease-in-out;
+}
+
+.animated-line:hover {
+  background-size: 100% 2px;
+}
+.submit{
+  background-color: #FFE887 !important;
+}
+.nav-link {
+  text-shadow: black 2px 2px 2px;
+  color: white !important;
+}
+/* inicio style footer */
+.ancor-footer{
+  color: white !important;
+}
+
+.contacto-columna{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.LogosFooter{
+  width: 1rem;
+  height: 1rem;
+}
+
+.btn-outline-light:hover{
+  color: white !important;
+  background-color: #FFBF67 !important;
+  border: #FFE887 solid 1px !important;
+}
+
+.LogosFooter>img{
+  justify-items: center;
+}
+.botones{
+  border-radius: 40%;
+}
+
+.enlaces{
+  color: white !important;
+}
+
+footer{
+  width: 100%;
+  background-color: #7cc37a;
+  background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+}
+/*  fin style footer  */
+
+/* MAIN */
+main{
+    min-height: 91.2vh;
+    background-image: url(../images/managerbackground.jpg);
+}
+
+.managerForm{
+  background-color: #fff !important;
+    min-height: 40rem;
+    width: 90vw;
+    margin-top:6rem;
+    margin-bottom: 2rem;
+    padding-bottom: 30px;
+    background: rgba( 255, 255, 255, 0.2 );
+    backdrop-filter: blur( 15px );
+    -webkit-backdrop-filter: blur( 15px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 22px;
+    box-shadow:  12px 12px 16px #000000,
+                 -12px -12px 16px #000000;
+}
+
+.line{
+border-bottom: #edcc3b 2px solid;
+width: 10.5%;
+height: fit-content;
+}
+.line2{
+border: #edcc3b 1px solid;
+width: 100%;
+}
+.form-control{
+    margin-top: .5rem;
+}
+
+@media screen and (min-width:320px) and (max-width:425px) {
+    .managerForm{
+        width: 91vw;
+    }
+    .responsive-form{
+        width:fit-content;
+    }
+    .addProducts h2{
+        font-size: 28.6px !important;
+
+    }
+    .line2{
+        display: none;
+    }
+    .uploadArchive{
+        width: 45%;
+    }
+    .responsive-inputs input{
+        width: fit-content;
+    }
+    .responsive-inputs h5{
+        font-size: small;
+    }
+    .responsive-delete{
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+    .header-area .main-nav .logo{
+        font-size: 23px;
+    }
+}
+@media screen and (max-width:991px) {
+    .header-area .main-nav .logo{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1061px) {
+
+  .main-banner .caption h2 {
+    font-size: 130%;
+  }
+
+  
+  /* footerresponsive */
+  .container-elements-footer{
+    display: flex;
+    flex-direction: column;
+
+}
+.footerGymLogo{
+    display: flex;
+    
+    flex-direction: column;
+    align-self: center;
+    margin-bottom: 10%;
+}
+
+.company-section{
+    display: flex;
+            
+    flex-direction: column;
+    align-self: center;
+    margin-bottom: 10%;
+}
+
+.account-section{
+    display: flex;
+        
+    flex-direction: column;
+    align-self: center;
+    margin-bottom: 10%;
+}
+
+.contact-us-section{
+    display: flex;
+        
+    flex-direction: column;
+    align-self: center;
+    margin-bottom: 10%;
+}
+
+
+}
+
+
+
+/* 
+---------------------------------------------
+footer
+--------------------------------------------- 
+*/
+.footer {
+  
+text-align: center;
+padding: 30px 0px;
+background-image: url(../images/close-up-of-many-metal-dumbbells-on-rack-in-sport-fitness-center.jpg);  border-top: 4px solid #d3b335;
+/*background-image: url(../images/close-up-of-many-metal-dumbbells-on-rack-in-sport-fitness-center.jpg);
+background-color: #383b40;*/
+background-position-y: 65rem;
+}
+
+footer p {
+color: #232d39;
+font-size: 13px;
+}
+
+footer p a {
+cursor: pointer;
+color: #edc93b;
+}
+
+footer p a:hover {
+color: #edc93b;
+}
+footer em{
+color: #edc93b;
+}
+.footerGymLogo{
+gap: 1rem;
+}
+.footerGymLogo h5{
+font-weight: 800;
+}
+.footerLogo{
+height: 5rem;
+}
+.media-container{
+display: flex;
+gap: 1rem;
+}
+.social-media{
+margin-top: 1rem;
+height: 2.5rem;
+width: 2.5rem;
+border-radius: 5rem;
+}
+.footerTexts{
+gap: 1rem;
+}

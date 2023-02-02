@@ -229,7 +229,9 @@
                                         <a href="" class="card-link text-uppercase btn">Agregar al carrito</a>
                                     </div>
                                 </div>
-
+                            </div>
+                            <div v-if="cervezas.length === 0">
+                                <h1>No se han encontrado resultados para tu búsqueda</h1>
                             </div>
                         </div>
                     </div>
